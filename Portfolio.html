@@ -54,7 +54,53 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </script>
   
 <h1>What I do</h1>
-<p>Yep</p>
+<div class="row">
+  <div class="column">
+    <img src="http://clipart-library.com/images/AcbrgxnKi.jpg"> <!-- book-length -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxbtCAPQYCa3N18iTTEDX9UFRk3fDQ0-3cc8mLSSryY6JiXcM&s"> 
+  </div>
+  <div class="column">
+    <img src="http://clipart-library.com/data_images/421481.jpg"> <!-- articles -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTT4sunQ1IvVxBwuwT_dQlWOJEQA7bzLirjuKcWc67IwWs2FM&s">
+  </div>
+</div>
+  
+  
+<!--CSS for the grid of options-->  
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
 </body>
 </html>
